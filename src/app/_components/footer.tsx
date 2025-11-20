@@ -1,28 +1,23 @@
 import Container from "@/app/_components/container";
-import { EXAMPLE_PATH } from "@/lib/constants";
+import { GITHUB_URL } from "@/lib/constants";
 
 export function Footer() {
+  const year = new Date().getFullYear();
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800">
+    <footer className="bg-lime-100 border-t border-lime-200 dark:bg-lime-900 dark:border-lime-800">
       <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-[2.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
+        <div className="py-8 text-sm text-neutral-800 dark:text-neutral-200 grid grid-cols-3 items-center">
+          <div />
+          <div className="justify-self-center text-center select-none">© {year} Ji Seung Ryul</div>
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="justify-self-end inline-flex items-center rounded-md bg-yellow-400 px-3 py-1.5 text-sm font-semibold text-black no-underline shadow-sm transition-colors hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-400/50"
+            aria-label="Open GitHub profile"
+          >
+            GitHub ↗
+          </a>
         </div>
       </Container>
     </footer>
