@@ -1,6 +1,6 @@
 ---
-title: "Dynamic Routing and Static Generation"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+title: "동적 라우팅과 정적 생성"
+excerpt: "Next.js에서 동적 라우팅과 정적 생성을 결합하면 강력하고 유연한 웹 애플리케이션을 구축할 수 있습니다. URL 파라미터를 사용하여 동적으로 페이지를 생성하면서도 정적 생성의 이점을 누릴 수 있는 방법을 알아봅니다."
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
@@ -10,10 +10,10 @@ ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+Next.js의 동적 라우팅은 URL 파라미터를 기반으로 페이지를 동적으로 생성할 수 있게 해주는 강력한 기능입니다. 블로그 포스트, 제품 상세 페이지, 사용자 프로필 등 데이터에 따라 다양한 페이지를 생성해야 하는 경우에 매우 유용합니다. 정적 생성과 결합하면 빌드 시점에 모든 동적 페이지를 미리 생성하여 최고의 성능을 제공할 수 있습니다.
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+`getStaticPaths` 함수를 사용하면 어떤 동적 경로들을 미리 생성할지 Next.js에 알려줄 수 있습니다. 예를 들어, 블로그의 모든 포스트 목록을 반환하면 각 포스트에 대한 페이지가 빌드 시점에 생성됩니다. 이렇게 생성된 페이지들은 CDN에 캐싱되어 사용자에게 즉시 제공됩니다.
 
-## Lorem Ipsum
+## 폴백(Fallback) 옵션 활용하기
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+`getStaticPaths`의 fallback 옵션을 사용하면 빌드 시점에 모든 페이지를 생성하지 않고도 동적 라우팅을 활용할 수 있습니다. `fallback: 'blocking'`을 설정하면 미리 생성되지 않은 페이지는 첫 요청 시 서버에서 생성되고, 이후 요청에는 캐싱된 페이지가 제공됩니다. 이는 수천 개의 동적 페이지가 있는 경우 빌드 시간을 크게 단축시킬 수 있습니다. 또한 `fallback: true`를 사용하면 로딩 상태를 보여주면서 페이지를 생성할 수 있어 더 나은 사용자 경험을 제공할 수 있습니다.

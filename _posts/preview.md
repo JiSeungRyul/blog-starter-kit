@@ -1,6 +1,6 @@
 ---
-title: "Preview Mode for Static Generation"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+title: "정적 생성을 위한 프리뷰 모드"
+excerpt: "Next.js의 프리뷰 모드를 사용하면 정적으로 생성된 페이지를 배포 전에 미리 확인할 수 있습니다. CMS의 초안 콘텐츠를 실시간으로 미리보기하면서도 정적 생성의 이점을 유지할 수 있는 방법을 소개합니다."
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
@@ -10,10 +10,10 @@ ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+정적 생성을 사용하는 웹사이트에서는 콘텐츠가 빌드 시점에 고정되기 때문에, 게시 전에 초안 콘텐츠를 미리 확인하는 것이 어려울 수 있습니다. Next.js의 프리뷰 모드는 이러한 문제를 해결해줍니다. 프리뷰 모드를 활성화하면 정적 생성을 우회하고 요청 시점에 페이지를 렌더링하여 최신 콘텐츠를 확인할 수 있습니다.
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+프리뷰 모드는 특히 헤드리스 CMS와 함께 사용할 때 매우 유용합니다. 콘텐츠 작성자가 CMS에서 초안을 작성하고 "미리보기" 버튼을 클릭하면, Next.js 애플리케이션에서 해당 초안을 실시간으로 렌더링하여 보여줄 수 있습니다. 이를 통해 콘텐츠를 게시하기 전에 어떻게 보일지 정확히 확인할 수 있습니다.
 
-## Lorem Ipsum
+## 프리뷰 모드 구현하기
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+프리뷰 모드를 구현하려면 먼저 프리뷰 API 라우트를 생성해야 합니다. 이 라우트는 프리뷰 쿠키를 설정하고 사용자를 원하는 페이지로 리디렉션합니다. `getStaticProps` 함수에서는 `preview` 파라미터를 확인하여 프리뷰 모드인 경우 초안 데이터를 가져오도록 구현할 수 있습니다. 프리뷰를 종료하려면 프리뷰 쿠키를 제거하는 exit-preview API 라우트를 만들면 됩니다. 이렇게 하면 정적 생성의 이점을 유지하면서도 필요할 때 동적으로 콘텐츠를 미리볼 수 있습니다.
