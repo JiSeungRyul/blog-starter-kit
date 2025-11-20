@@ -52,7 +52,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title} | ${CMS_NAME}을 사용한 Next.js 블로그`;
 
   return {
     title,

@@ -10,8 +10,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `${CMS_NAME}을 사용한 Next.js 블로그 예제`,
+  description: `Next.js와 ${CMS_NAME}을 사용하여 정적으로 생성된 블로그 예제입니다.`,
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <head>
         <link
           rel="apple-touch-icon"

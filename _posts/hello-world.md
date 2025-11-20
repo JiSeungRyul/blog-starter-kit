@@ -1,6 +1,6 @@
 ---
-title: "Learn How to Pre-render Pages Using Static Generation with Next.js"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+title: "Next.js로 정적 생성을 사용하여 페이지를 사전 렌더링하는 방법 배우기"
+excerpt: "Next.js의 정적 생성 기능을 활용하면 빌드 타임에 페이지를 미리 렌더링하여 뛰어난 성능과 SEO를 제공할 수 있습니다. 이 글에서는 정적 생성의 기본 개념과 실제 적용 방법을 자세히 알아봅니다."
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
@@ -10,10 +10,10 @@ ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+Next.js는 React 기반의 강력한 프레임워크로, 정적 생성(Static Generation)을 통해 빌드 시점에 HTML을 미리 생성할 수 있습니다. 이를 통해 사용자에게 빠른 페이지 로딩 속도와 향상된 SEO를 제공할 수 있습니다. 정적 생성은 블로그, 마케팅 페이지, 문서 사이트 등 콘텐츠가 자주 변경되지 않는 페이지에 이상적입니다.
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+정적 생성의 가장 큰 장점은 성능입니다. 페이지가 빌드 시점에 미리 생성되므로 CDN을 통해 캐싱되어 전 세계 어디서나 빠르게 제공될 수 있습니다. 또한 서버 부하가 줄어들어 더 많은 트래픽을 효율적으로 처리할 수 있습니다. 검색 엔진도 완성된 HTML을 즉시 크롤링할 수 있어 SEO에도 유리합니다.
 
-## Lorem Ipsum
+## 실제 적용 사례
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+정적 생성은 다양한 프로젝트에서 성공적으로 활용되고 있습니다. 특히 블로그와 같은 콘텐츠 중심 웹사이트에서는 각 포스트를 빌드 시점에 미리 렌더링하여 사용자에게 즉각적인 페이지 로딩을 제공합니다. 또한 마크다운이나 CMS와 같은 다양한 데이터 소스와 쉽게 통합할 수 있어 개발자 경험도 우수합니다. Next.js의 `getStaticProps`와 `getStaticPaths`를 사용하면 동적 라우팅과 정적 생성을 함께 활용할 수 있습니다.
